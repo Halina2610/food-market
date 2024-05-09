@@ -67,7 +67,7 @@ export default function SignUpForm() {
       <FormTextContent>
         <Modal show={showModal} onClose={() => setShowModal(false)} />
         <FormTitle>
-          Get <TitleHightlight>20% discount</TitleHightlight> <br />
+          Get <TitleHightlight>10% discount</TitleHightlight> <br />
           on your first purchase
         </FormTitle>
         <FormDesc>
@@ -138,13 +138,11 @@ export default function SignUpForm() {
 
 const Container = styled.section`
   ${sectionPadding} {
-    padding: 130px 200px;
     background: var(--sign-up-bg-color);
     border-radius: 16px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 160px; 
   }
 
   @media (max-width: 1280px) {

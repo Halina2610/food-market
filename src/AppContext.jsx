@@ -5,7 +5,6 @@ import specialOffersData from "./data/specialOffers";
 
 const AppContext = createContext();
 
-// eslint-disable-next-line react/prop-types
 export function ContextProvider({ children }) {
   const categories = categoriesData;
   const specialOffers = specialOffersData;
