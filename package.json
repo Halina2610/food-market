@@ -2,16 +2,13 @@
   "name": "food-market",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Halina2610.github.io/food-market",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
     "build": "tsc && vite build",
     "format": "prettier --write src",
     "lint": "eslint src --ext .jsx,.js,.tsx,.ts  --no-error-on-unmatched-pattern --fix && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/styled": "^11.11.5",
