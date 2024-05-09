@@ -22,18 +22,7 @@ import tomatoes from "../assets/images/allProducts/tomatoes.png";
 import watermelonJuice from "../assets/images/allProducts/watermelon-juice.png";
 
 const allProductsData = [
-  {
-    id: uuidv4(),
-    category: "Drinks",
-    favourite: true,
-    trending: true,
-    img: watermelonJuice,
-    title: "Fresh Juice",
-    unit: "1 unit",
-    rating: 4.8,
-    price: 8.0,
-    discount: "",
-  },
+
   {
     id: uuidv4(),
     category: "Vegetables",
@@ -73,7 +62,7 @@ const allProductsData = [
   {
     id: uuidv4(),
     category: "Vegetables",
-    favourite: false,
+    favourite: true,
     trending: true,
     img: avocado,
     title: "Local Avocado",
@@ -85,7 +74,7 @@ const allProductsData = [
   {
     id: uuidv4(),
     category: "Snacks",
-    favourite: false,
+    favourite: true,
     trending: true,
     img: biscuits,
     title: "Munch Crunchy Cookies",
@@ -97,7 +86,7 @@ const allProductsData = [
   {
     id: uuidv4(),
     category: "Fruits",
-    favourite: false,
+    favourite: true,
     trending: true,
     img: bananas,
     title: "Fresh Bananas",
@@ -109,7 +98,7 @@ const allProductsData = [
   {
     id: uuidv4(),
     category: "Drinks",
-    favourite: false,
+    favourite: true,
     trending: true,
     img: orangeJuice,
     title: "Fresh Orange Juice",
@@ -121,7 +110,7 @@ const allProductsData = [
   {
     id: uuidv4(),
     category: "Drinks",
-    favourite: false,
+    favourite: true,
     trending: true,
     img: milk,
     title: "Pure Dairy milk ",
@@ -133,7 +122,7 @@ const allProductsData = [
   {
     id: uuidv4(),
     category: "Fruits",
-    favourite: false,
+    favourite: true,
     trending: true,
     img: raspberries,
     title: "Raspberries",
@@ -145,7 +134,7 @@ const allProductsData = [
   {
     id: uuidv4(),
     category: "Drinks",
-    favourite: false,
+    favourite: true,
     trending: true,
     img: baristaBeverage,
     title: "Pacific barista beverage",
