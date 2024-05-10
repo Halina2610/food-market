@@ -17,15 +17,9 @@ export function ContextProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem("productsData", JSON.stringify(allProducts));
-  }, [allProducts]);
-
-  useEffect(() => {
-    setTrending(trendingProducts);
-  }, [allProducts, trendingProducts]);
-
-  useEffect(() => {
-    localStorage.setItem("cartData", JSON.stringify(cart));
-  }, [cart]);
+      setTrending(trendingProducts);
+      localStorage.setItem("cartData", JSON.stringify(cart));
+  }, [allProducts, allProducts, trendingProducts, cart]);
 
   function getInitialProductsData() {
     const productsData = localStorage.getItem("productsData");

@@ -43,6 +43,7 @@ html {
   font-family: var(--font-family-primary);
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 body {

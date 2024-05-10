@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
 
   function showBurgerMenu() {
     setShowMenu(true);
@@ -29,13 +30,14 @@ export default function Header() {
   const cartAmount = cart.length;
 
   function searchTarg(e) {
-    setSearchTarget(e.target.value);
+    const inputValue = e.target.value;
+    if (inputValue.length >= 3) {
+      setSearchTarget(inputValue);
+    }
   }
 
-  const navigate = useNavigate();
-
   function keyDownHandler(e) {
-    if (e.which === 13) {
+    if (e.which === 13 && seacrhTarget.length >= 3) {
       navigate("/search-results");
     }
   }
