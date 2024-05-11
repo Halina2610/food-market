@@ -87,6 +87,10 @@ const Container = styled.div`
 
   @media (max-width: 420px) {
     position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 

@@ -67,7 +67,7 @@ export default function SignUpForm() {
       <FormTextContent>
         <Modal show={showModal} onClose={() => setShowModal(false)} />
         <FormTitle>
-          Get <TitleHightlight>10% discount</TitleHightlight> <br />
+          Get <TitleAccent>10% discount</TitleAccent> <br />
           on your first purchase
         </FormTitle>
         <FormDesc>
@@ -138,15 +138,15 @@ export default function SignUpForm() {
 
 const Container = styled.section`
   ${sectionPadding} {
-    background: var(--sign-up-bg-color);
-    border-radius: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
   }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--special-offer-bg-muffins);
+  border-radius: 12px;
 
   @media (max-width: 1280px) {
-    padding: 80px 120px;
+    padding: 80px 0;
   }
 
   @media (max-width: 1024px) {
@@ -168,17 +168,22 @@ const Container = styled.section`
 `;
 
 const FormTextContent = styled.div`
-  max-width: 450px;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-
-  @media (max-width: 1024px) {
-    max-width: 300px;
-  }
+  padding: 50px;
 
   @media (max-width: 990px) {
-    max-width: 100%;
+    width: 100%;
+    padding: 50px 0;
+  }  
+  
+  @media (max-width: 420px) {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -198,7 +203,7 @@ const FormTitle = styled.h2`
   }
 `;
 
-const TitleHightlight = styled.span`
+const TitleAccent = styled.span`
   color: var(--main-offer-hightlight-color);
 `;
 
@@ -217,9 +222,19 @@ const FormDesc = styled.p`
 
 const Form = styled.form`
   width: 50%;
+  padding: 50px;
 
   @media (max-width: 990px) {
     width: 100%;
+    padding: 0;
+  }
+  
+  @media (max-width: 420px) {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 

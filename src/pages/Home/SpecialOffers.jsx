@@ -4,32 +4,33 @@ import styled from "styled-components";
 import { sectionPadding } from "../../assets/styles/styles";
 
 export default function SpecialOffers() {
-  const { specialOffers } = useContext(AppContext);
+    const { specialOffers } = useContext(AppContext);
 
-  return (
-    <Container id="offers">
-      {specialOffers.map((offer) => (
-        <OfferCard key={offer.id} bgColor={offer.bgColor} bgImg={offer.bgImg}>
-          <OfferTextContent>
-            <OfferHightlight>{offer.offer}</OfferHightlight>
-            <OfferTitle>{offer.title}</OfferTitle>
-            <OfferDesc>{offer.desc}</OfferDesc>
-            <OfferBtn>Shop it</OfferBtn>
-          </OfferTextContent>
-          <OfferImg src={offer.img} alt={offer.title} />
-        </OfferCard>
-      ))}
-    </Container>
-  );
+    return (
+        <Container id="offers">
+            <OfferWrapper>
+                {specialOffers.map((offer) => (
+                    <OfferCard key={offer.id} bgColor={offer.bgColor} bgImg={offer.bgImg}>
+                        <OfferTextContent>
+                            <OfferText>{offer.offer}</OfferText>
+                            <OfferTitle>{offer.title}</OfferTitle>
+                            <OfferDesc>{offer.desc}</OfferDesc>
+                            <OfferBtn>Shop it</OfferBtn>
+                        </OfferTextContent>
+                        <OfferImg src={offer.img} alt={offer.title} />
+                    </OfferCard>
+                ))}
+            </OfferWrapper>
+        </Container>
+    );
 }
 
 const Container = styled.section`
   ${sectionPadding} {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    max-width: 100%;
+    padding: 100px;
   }
 
   @media (max-width: 1440px) {
@@ -37,11 +38,37 @@ const Container = styled.section`
   }
 `;
 
+const OfferWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 50%;
+  max-height: 400px;
+
+  @media (max-width: 1440px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    flex-wrap: nowrap;
+    padding: 30px;
+    margin: 200px 0;
+  }
+  
+  @media (max-width: 420px) {
+    max-width: 350px;
+    height: 100%;
+    padding: 30px;
+  }
+`
+
 const OfferCard = styled.div`
-  max-width: 740px;
+  max-width: 700px;
   flex-grow: 1;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; 
   height: 390px;
   padding: 40px 0 40px 60px;
   border-radius: 12px;
@@ -60,8 +87,9 @@ const OfferTextContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`;
-const OfferHightlight = styled.p`
+`
+
+const OfferText = styled.p`
   font-family: var(--font-family-original);
   font-weight: 400;
   font-size: 20px;

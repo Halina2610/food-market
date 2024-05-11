@@ -129,7 +129,7 @@ const allProductsData = [
     unit: "1 kg",
     rating: 3.5,
     price: 14.0,
-    discount: "",
+    discount: 25,
   },
   {
     id: uuidv4(),
@@ -189,7 +189,7 @@ const allProductsData = [
     unit: "1 unit",
     rating: 4.5,
     price: 18.0,
-    discount: "",
+    discount: 5,
   },
   {
     id: uuidv4(),

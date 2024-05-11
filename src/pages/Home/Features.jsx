@@ -4,38 +4,44 @@ import featuresData from "../../data/features";
 
 export default function Features() {
   return (
-    <Container>
-      {featuresData.map((feature) => (
-        <Card key={feature.title}>
-          <TitleContainer>
-            <Icon src={feature.icon} alt={feature.title} />
-            <Title>{feature.title}</Title>
-          </TitleContainer>
-          <CardHr />
-          <Desc>{feature.desc}</Desc>
-        </Card>
-      ))}
-    </Container>
+      <Container>
+        {featuresData.map((feature) => (
+            <Card key={feature.title}>
+              <TitleContainer>
+                <Icon src={feature.icon} alt={feature.title} />
+                <Title>{feature.title}</Title>
+              </TitleContainer>
+              <CardHr />
+              <Desc>{feature.desc}</Desc>
+            </Card>
+        ))}
+      </Container>
   );
 }
 
 const Container = styled.div`
-  ${sectionPadding} {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  ${sectionPadding} 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 58px;
-  }
+  
+ 
 
   @media (max-width: 990px) {
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 40px;
+  }
+
+  @media (max-width: 420px) {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    padding: 50px;
+    align-items: center;
   }
 `;
 
 const Card = styled.div`
-  width: 280px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

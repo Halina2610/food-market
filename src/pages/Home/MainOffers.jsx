@@ -102,13 +102,10 @@ const MainOffer = styled.div`
   grid-column: 1/4;
   grid-row: 1/3;
   display: flex;
-  padding: 32px;
-  padding-left: 100px;
-  overflow: hidden;
+  padding: 32px 100px 32px 32px;
 
   @media (max-width: 1280px) {
-    padding: 60px;
-    padding-right: 10px;
+    padding: 60px 60px 60px 10px;
   }
 
   @media (max-width: 990px) {

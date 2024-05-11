@@ -33,6 +33,11 @@ const Container = styled.div`
     box-shadow: 0 21px 44px rgba(0, 0, 0, 0.2);
   }
 
+  @media (max-width: 990px) {
+    width: 80%;
+    padding: 50px 0;
+  }
+
   @media (max-width: 420px) {
     max-width: 80vw;
     height: 100%;

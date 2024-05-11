@@ -29,7 +29,9 @@ export default function TimedOffers() {
 }
 
 const Container = styled.section`
-  ${sectionPadding}
+  ${sectionPadding} {
+    
+  }
 `;
 
 const CardsContainer = styled.div`
@@ -39,5 +41,10 @@ const CardsContainer = styled.div`
  
   @media (max-width: 420px) {
     margin-top: 100px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
